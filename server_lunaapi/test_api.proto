@@ -1,0 +1,71 @@
+// See README.txt for information and build instructions.
+//
+// Note: START and END tags are used in comments to define sections used in
+// tutorials.  They are not part of the syntax for Protocol Buffers.
+//
+// To get an in-depth walkthrough of this file and the related examples, see:
+// https://developers.google.com/protocol-buffers/docs/tutorials
+
+// [START declaration]
+syntax = "proto3";
+package LunaSDKService;
+
+// [END declaration]
+
+// [START java_declaration]
+option java_package = "com.LunaSDKService";
+option java_outer_classname = "ImgProcResult";
+// [END java_declaration]
+
+// [START csharp_declaration]
+option csharp_namespace = "Google.Protobuf.LunaSDKService";
+// [END csharp_declaration]
+
+service LunaSDKServer
+{
+  rpc Proccesing(Image) returns (ImageProccessingResult ) {}
+}
+// [START messages]
+message  Image {
+  int32 width = 1;
+  int32 height =2;
+  int32 image_date_size =3;
+  bytes image_date =4;
+}
+
+message ImageProccesing {
+  int32 ID_Request =1;
+  Image Photo =2;
+}
+
+message QualityFaceFountAttribute {
+    double dark = 1;
+    double ligth = 2;
+    double gray = 3;
+    double blur = 4;
+    double quality = 5;
+    double threshold = 6;
+}
+
+message HeadPoseFaceFountAttribute {
+    float pitch = 1;
+    float yam = 2;
+    float rool = 3;
+}
+message Rectangle {
+    int32 x =1;
+    int32 y =2;
+    int32 width =3;
+    int32 height =4;    
+}
+
+message FaceFountAttribute {
+    Rectangle rect =1;
+    double score =2;
+    Image WarpIamge =3;
+}
+
+message ImageProccessingResult {
+    repeated FaceFountAttribute FaceFounts  =1;
+}
+// [END messages]
