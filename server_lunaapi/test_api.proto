@@ -45,7 +45,7 @@ message QualityFaceFountAttribute {
 message HeadPoseFaceFountAttribute {
     float pitch = 1;
     float yam = 2;
-    float rool = 3;
+    float roll = 3;
 }
 message Rectangle {
     int32 x =1;
@@ -58,6 +58,8 @@ message FaceFountAttribute {
     Rectangle rect =1;
     double score =2;
     Image WarpIamge =3;
+    HeadPoseFaceFountAttribute HeadPos=4;
+    QualityFaceFountAttribute Quality=5;
 }
 
 message ImageProccessingResult {
