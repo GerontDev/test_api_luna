@@ -20,9 +20,11 @@
 // @@protoc_insertion_point(includes)
 
 namespace protobuf_test_5fapi_2eproto {
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_test_5fapi_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_HeadPoseFaceFountAttribute;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_test_5fapi_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Image;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_test_5fapi_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_QualityFaceFountAttribute;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_test_5fapi_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Rectangle;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_test_5fapi_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_FaceFountAttribute;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_test_5fapi_2eproto ::google::protobuf::internal::SCCInfo<4> scc_info_FaceFountAttribute;
 }  // namespace protobuf_test_5fapi_2eproto
 namespace LunaSDK {
 class ImageDefaultTypeInternal {
@@ -144,10 +146,12 @@ static void InitDefaultsFaceFountAttribute() {
   ::LunaSDK::FaceFountAttribute::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<2> scc_info_FaceFountAttribute =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsFaceFountAttribute}, {
+::google::protobuf::internal::SCCInfo<4> scc_info_FaceFountAttribute =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsFaceFountAttribute}, {
       &protobuf_test_5fapi_2eproto::scc_info_Rectangle.base,
-      &protobuf_test_5fapi_2eproto::scc_info_Image.base,}};
+      &protobuf_test_5fapi_2eproto::scc_info_Image.base,
+      &protobuf_test_5fapi_2eproto::scc_info_HeadPoseFaceFountAttribute.base,
+      &protobuf_test_5fapi_2eproto::scc_info_QualityFaceFountAttribute.base,}};
 
 static void InitDefaultsImageProccessingResult() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -211,7 +215,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::HeadPoseFaceFountAttribute, pitch_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::HeadPoseFaceFountAttribute, yam_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::HeadPoseFaceFountAttribute, rool_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::HeadPoseFaceFountAttribute, roll_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::Rectangle, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -229,6 +233,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::FaceFountAttribute, rect_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::FaceFountAttribute, score_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::FaceFountAttribute, warpiamge_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::FaceFountAttribute, headpos_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::FaceFountAttribute, quality_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::ImageProccessingResult, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -243,7 +249,7 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 27, -1, sizeof(::LunaSDK::HeadPoseFaceFountAttribute)},
   { 35, -1, sizeof(::LunaSDK::Rectangle)},
   { 44, -1, sizeof(::LunaSDK::FaceFountAttribute)},
-  { 52, -1, sizeof(::LunaSDK::ImageProccessingResult)},
+  { 54, -1, sizeof(::LunaSDK::ImageProccessingResult)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -286,19 +292,22 @@ void AddDescriptorsImpl() {
       "\n\004gray\030\003 \001(\001\022\014\n\004blur\030\004 \001(\001\022\017\n\007quality\030\005 "
       "\001(\001\022\021\n\tthreshold\030\006 \001(\001\"F\n\032HeadPoseFaceFo"
       "untAttribute\022\r\n\005pitch\030\001 \001(\002\022\013\n\003yam\030\002 \001(\002"
-      "\022\014\n\004rool\030\003 \001(\002\"@\n\tRectangle\022\t\n\001x\030\001 \001(\005\022\t"
+      "\022\014\n\004roll\030\003 \001(\002\"@\n\tRectangle\022\t\n\001x\030\001 \001(\005\022\t"
       "\n\001y\030\002 \001(\005\022\r\n\005width\030\003 \001(\005\022\016\n\006height\030\004 \001(\005"
-      "\"h\n\022FaceFountAttribute\022 \n\004rect\030\001 \001(\0132\022.L"
-      "unaSDK.Rectangle\022\r\n\005score\030\002 \001(\001\022!\n\tWarpI"
-      "amge\030\003 \001(\0132\016.LunaSDK.Image\"I\n\026ImageProcc"
-      "essingResult\022/\n\nFaceFounts\030\001 \003(\0132\033.LunaS"
-      "DK.FaceFountAttribute2P\n\rLunaSDKServer\022\?"
-      "\n\nProccesing\022\016.LunaSDK.Image\032\037.LunaSDK.I"
-      "mageProccessingResult\"\000B!\252\002\036Google.Proto"
-      "buf.LunaSDKServiceb\006proto3"
+      "\"\323\001\n\022FaceFountAttribute\022 \n\004rect\030\001 \001(\0132\022."
+      "LunaSDK.Rectangle\022\r\n\005score\030\002 \001(\001\022!\n\tWarp"
+      "Iamge\030\003 \001(\0132\016.LunaSDK.Image\0224\n\007HeadPos\030\004"
+      " \001(\0132#.LunaSDK.HeadPoseFaceFountAttribut"
+      "e\0223\n\007Quality\030\005 \001(\0132\".LunaSDK.QualityFace"
+      "FountAttribute\"I\n\026ImageProccessingResult"
+      "\022/\n\nFaceFounts\030\001 \003(\0132\033.LunaSDK.FaceFount"
+      "Attribute2P\n\rLunaSDKServer\022\?\n\nProccesing"
+      "\022\016.LunaSDK.Image\032\037.LunaSDK.ImageProccess"
+      "ingResult\"\000B!\252\002\036Google.Protobuf.LunaSDKS"
+      "erviceb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 746);
+      descriptor, 854);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "test_api.proto", &protobuf_RegisterTypes);
 }
@@ -1341,7 +1350,7 @@ void HeadPoseFaceFountAttribute::InitAsDefaultInstance() {
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int HeadPoseFaceFountAttribute::kPitchFieldNumber;
 const int HeadPoseFaceFountAttribute::kYamFieldNumber;
-const int HeadPoseFaceFountAttribute::kRoolFieldNumber;
+const int HeadPoseFaceFountAttribute::kRollFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 HeadPoseFaceFountAttribute::HeadPoseFaceFountAttribute()
@@ -1356,15 +1365,15 @@ HeadPoseFaceFountAttribute::HeadPoseFaceFountAttribute(const HeadPoseFaceFountAt
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&pitch_, &from.pitch_,
-    static_cast<size_t>(reinterpret_cast<char*>(&rool_) -
-    reinterpret_cast<char*>(&pitch_)) + sizeof(rool_));
+    static_cast<size_t>(reinterpret_cast<char*>(&roll_) -
+    reinterpret_cast<char*>(&pitch_)) + sizeof(roll_));
   // @@protoc_insertion_point(copy_constructor:LunaSDK.HeadPoseFaceFountAttribute)
 }
 
 void HeadPoseFaceFountAttribute::SharedCtor() {
   ::memset(&pitch_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&rool_) -
-      reinterpret_cast<char*>(&pitch_)) + sizeof(rool_));
+      reinterpret_cast<char*>(&roll_) -
+      reinterpret_cast<char*>(&pitch_)) + sizeof(roll_));
 }
 
 HeadPoseFaceFountAttribute::~HeadPoseFaceFountAttribute() {
@@ -1396,8 +1405,8 @@ void HeadPoseFaceFountAttribute::Clear() {
   (void) cached_has_bits;
 
   ::memset(&pitch_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&rool_) -
-      reinterpret_cast<char*>(&pitch_)) + sizeof(rool_));
+      reinterpret_cast<char*>(&roll_) -
+      reinterpret_cast<char*>(&pitch_)) + sizeof(roll_));
   _internal_metadata_.Clear();
 }
 
@@ -1439,14 +1448,14 @@ bool HeadPoseFaceFountAttribute::MergePartialFromCodedStream(
         break;
       }
 
-      // float rool = 3;
+      // float roll = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(29u /* 29 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &rool_)));
+                 input, &roll_)));
         } else {
           goto handle_unusual;
         }
@@ -1489,9 +1498,9 @@ void HeadPoseFaceFountAttribute::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteFloat(2, this->yam(), output);
   }
 
-  // float rool = 3;
-  if (this->rool() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->rool(), output);
+  // float roll = 3;
+  if (this->roll() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->roll(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1518,9 +1527,9 @@ void HeadPoseFaceFountAttribute::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(2, this->yam(), target);
   }
 
-  // float rool = 3;
-  if (this->rool() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->rool(), target);
+  // float roll = 3;
+  if (this->roll() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->roll(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1550,8 +1559,8 @@ size_t HeadPoseFaceFountAttribute::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
-  // float rool = 3;
-  if (this->rool() != 0) {
+  // float roll = 3;
+  if (this->roll() != 0) {
     total_size += 1 + 4;
   }
 
@@ -1588,8 +1597,8 @@ void HeadPoseFaceFountAttribute::MergeFrom(const HeadPoseFaceFountAttribute& fro
   if (from.yam() != 0) {
     set_yam(from.yam());
   }
-  if (from.rool() != 0) {
-    set_rool(from.rool());
+  if (from.roll() != 0) {
+    set_roll(from.roll());
   }
 }
 
@@ -1619,7 +1628,7 @@ void HeadPoseFaceFountAttribute::InternalSwap(HeadPoseFaceFountAttribute* other)
   using std::swap;
   swap(pitch_, other->pitch_);
   swap(yam_, other->yam_);
-  swap(rool_, other->rool_);
+  swap(roll_, other->roll_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
@@ -1973,11 +1982,17 @@ void FaceFountAttribute::InitAsDefaultInstance() {
       ::LunaSDK::Rectangle::internal_default_instance());
   ::LunaSDK::_FaceFountAttribute_default_instance_._instance.get_mutable()->warpiamge_ = const_cast< ::LunaSDK::Image*>(
       ::LunaSDK::Image::internal_default_instance());
+  ::LunaSDK::_FaceFountAttribute_default_instance_._instance.get_mutable()->headpos_ = const_cast< ::LunaSDK::HeadPoseFaceFountAttribute*>(
+      ::LunaSDK::HeadPoseFaceFountAttribute::internal_default_instance());
+  ::LunaSDK::_FaceFountAttribute_default_instance_._instance.get_mutable()->quality_ = const_cast< ::LunaSDK::QualityFaceFountAttribute*>(
+      ::LunaSDK::QualityFaceFountAttribute::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int FaceFountAttribute::kRectFieldNumber;
 const int FaceFountAttribute::kScoreFieldNumber;
 const int FaceFountAttribute::kWarpIamgeFieldNumber;
+const int FaceFountAttribute::kHeadPosFieldNumber;
+const int FaceFountAttribute::kQualityFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 FaceFountAttribute::FaceFountAttribute()
@@ -2001,6 +2016,16 @@ FaceFountAttribute::FaceFountAttribute(const FaceFountAttribute& from)
   } else {
     warpiamge_ = NULL;
   }
+  if (from.has_headpos()) {
+    headpos_ = new ::LunaSDK::HeadPoseFaceFountAttribute(*from.headpos_);
+  } else {
+    headpos_ = NULL;
+  }
+  if (from.has_quality()) {
+    quality_ = new ::LunaSDK::QualityFaceFountAttribute(*from.quality_);
+  } else {
+    quality_ = NULL;
+  }
   score_ = from.score_;
   // @@protoc_insertion_point(copy_constructor:LunaSDK.FaceFountAttribute)
 }
@@ -2019,6 +2044,8 @@ FaceFountAttribute::~FaceFountAttribute() {
 void FaceFountAttribute::SharedDtor() {
   if (this != internal_default_instance()) delete rect_;
   if (this != internal_default_instance()) delete warpiamge_;
+  if (this != internal_default_instance()) delete headpos_;
+  if (this != internal_default_instance()) delete quality_;
 }
 
 void FaceFountAttribute::SetCachedSize(int size) const {
@@ -2049,6 +2076,14 @@ void FaceFountAttribute::Clear() {
     delete warpiamge_;
   }
   warpiamge_ = NULL;
+  if (GetArenaNoVirtual() == NULL && headpos_ != NULL) {
+    delete headpos_;
+  }
+  headpos_ = NULL;
+  if (GetArenaNoVirtual() == NULL && quality_ != NULL) {
+    delete quality_;
+  }
+  quality_ = NULL;
   score_ = 0;
   _internal_metadata_.Clear();
 }
@@ -2101,6 +2136,30 @@ bool FaceFountAttribute::MergePartialFromCodedStream(
         break;
       }
 
+      // .LunaSDK.HeadPoseFaceFountAttribute HeadPos = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_headpos()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .LunaSDK.QualityFaceFountAttribute Quality = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_quality()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -2144,6 +2203,18 @@ void FaceFountAttribute::SerializeWithCachedSizes(
       3, this->_internal_warpiamge(), output);
   }
 
+  // .LunaSDK.HeadPoseFaceFountAttribute HeadPos = 4;
+  if (this->has_headpos()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->_internal_headpos(), output);
+  }
+
+  // .LunaSDK.QualityFaceFountAttribute Quality = 5;
+  if (this->has_quality()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, this->_internal_quality(), output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -2177,6 +2248,20 @@ void FaceFountAttribute::SerializeWithCachedSizes(
         3, this->_internal_warpiamge(), deterministic, target);
   }
 
+  // .LunaSDK.HeadPoseFaceFountAttribute HeadPos = 4;
+  if (this->has_headpos()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, this->_internal_headpos(), deterministic, target);
+  }
+
+  // .LunaSDK.QualityFaceFountAttribute Quality = 5;
+  if (this->has_quality()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, this->_internal_quality(), deterministic, target);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
@@ -2206,6 +2291,20 @@ size_t FaceFountAttribute::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
         *warpiamge_);
+  }
+
+  // .LunaSDK.HeadPoseFaceFountAttribute HeadPos = 4;
+  if (this->has_headpos()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *headpos_);
+  }
+
+  // .LunaSDK.QualityFaceFountAttribute Quality = 5;
+  if (this->has_quality()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *quality_);
   }
 
   // double score = 2;
@@ -2246,6 +2345,12 @@ void FaceFountAttribute::MergeFrom(const FaceFountAttribute& from) {
   if (from.has_warpiamge()) {
     mutable_warpiamge()->::LunaSDK::Image::MergeFrom(from.warpiamge());
   }
+  if (from.has_headpos()) {
+    mutable_headpos()->::LunaSDK::HeadPoseFaceFountAttribute::MergeFrom(from.headpos());
+  }
+  if (from.has_quality()) {
+    mutable_quality()->::LunaSDK::QualityFaceFountAttribute::MergeFrom(from.quality());
+  }
   if (from.score() != 0) {
     set_score(from.score());
   }
@@ -2277,6 +2382,8 @@ void FaceFountAttribute::InternalSwap(FaceFountAttribute* other) {
   using std::swap;
   swap(rect_, other->rect_);
   swap(warpiamge_, other->warpiamge_);
+  swap(headpos_, other->headpos_);
+  swap(quality_, other->quality_);
   swap(score_, other->score_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }

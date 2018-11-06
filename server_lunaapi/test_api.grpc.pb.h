@@ -3,10 +3,10 @@
 // source: test_api.proto
 // Original file comments:
 // See README.txt for information and build instructions.
-//
+// 
 // Note: START and END tags are used in comments to define sections used in
 // tutorials.  They are not part of the syntax for Protocol Buffers.
-//
+// 
 // To get an in-depth walkthrough of this file and the related examples, see:
 // https://developers.google.com/protocol-buffers/docs/tutorials
 //

@@ -568,11 +568,11 @@ class HeadPoseFaceFountAttribute : public ::google::protobuf::Message /* @@proto
   float yam() const;
   void set_yam(float value);
 
-  // float rool = 3;
-  void clear_rool();
-  static const int kRoolFieldNumber = 3;
-  float rool() const;
-  void set_rool(float value);
+  // float roll = 3;
+  void clear_roll();
+  static const int kRollFieldNumber = 3;
+  float roll() const;
+  void set_roll(float value);
 
   // @@protoc_insertion_point(class_scope:LunaSDK.HeadPoseFaceFountAttribute)
  private:
@@ -580,7 +580,7 @@ class HeadPoseFaceFountAttribute : public ::google::protobuf::Message /* @@proto
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   float pitch_;
   float yam_;
-  float rool_;
+  float roll_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_test_5fapi_2eproto::TableStruct;
 };
@@ -821,6 +821,30 @@ class FaceFountAttribute : public ::google::protobuf::Message /* @@protoc_insert
   ::LunaSDK::Image* mutable_warpiamge();
   void set_allocated_warpiamge(::LunaSDK::Image* warpiamge);
 
+  // .LunaSDK.HeadPoseFaceFountAttribute HeadPos = 4;
+  bool has_headpos() const;
+  void clear_headpos();
+  static const int kHeadPosFieldNumber = 4;
+  private:
+  const ::LunaSDK::HeadPoseFaceFountAttribute& _internal_headpos() const;
+  public:
+  const ::LunaSDK::HeadPoseFaceFountAttribute& headpos() const;
+  ::LunaSDK::HeadPoseFaceFountAttribute* release_headpos();
+  ::LunaSDK::HeadPoseFaceFountAttribute* mutable_headpos();
+  void set_allocated_headpos(::LunaSDK::HeadPoseFaceFountAttribute* headpos);
+
+  // .LunaSDK.QualityFaceFountAttribute Quality = 5;
+  bool has_quality() const;
+  void clear_quality();
+  static const int kQualityFieldNumber = 5;
+  private:
+  const ::LunaSDK::QualityFaceFountAttribute& _internal_quality() const;
+  public:
+  const ::LunaSDK::QualityFaceFountAttribute& quality() const;
+  ::LunaSDK::QualityFaceFountAttribute* release_quality();
+  ::LunaSDK::QualityFaceFountAttribute* mutable_quality();
+  void set_allocated_quality(::LunaSDK::QualityFaceFountAttribute* quality);
+
   // double score = 2;
   void clear_score();
   static const int kScoreFieldNumber = 2;
@@ -833,6 +857,8 @@ class FaceFountAttribute : public ::google::protobuf::Message /* @@protoc_insert
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::LunaSDK::Rectangle* rect_;
   ::LunaSDK::Image* warpiamge_;
+  ::LunaSDK::HeadPoseFaceFountAttribute* headpos_;
+  ::LunaSDK::QualityFaceFountAttribute* quality_;
   double score_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_test_5fapi_2eproto::TableStruct;
@@ -1244,18 +1270,18 @@ inline void HeadPoseFaceFountAttribute::set_yam(float value) {
   // @@protoc_insertion_point(field_set:LunaSDK.HeadPoseFaceFountAttribute.yam)
 }
 
-// float rool = 3;
-inline void HeadPoseFaceFountAttribute::clear_rool() {
-  rool_ = 0;
+// float roll = 3;
+inline void HeadPoseFaceFountAttribute::clear_roll() {
+  roll_ = 0;
 }
-inline float HeadPoseFaceFountAttribute::rool() const {
-  // @@protoc_insertion_point(field_get:LunaSDK.HeadPoseFaceFountAttribute.rool)
-  return rool_;
+inline float HeadPoseFaceFountAttribute::roll() const {
+  // @@protoc_insertion_point(field_get:LunaSDK.HeadPoseFaceFountAttribute.roll)
+  return roll_;
 }
-inline void HeadPoseFaceFountAttribute::set_rool(float value) {
+inline void HeadPoseFaceFountAttribute::set_roll(float value) {
   
-  rool_ = value;
-  // @@protoc_insertion_point(field_set:LunaSDK.HeadPoseFaceFountAttribute.rool)
+  roll_ = value;
+  // @@protoc_insertion_point(field_set:LunaSDK.HeadPoseFaceFountAttribute.roll)
 }
 
 // -------------------------------------------------------------------
@@ -1442,6 +1468,114 @@ inline void FaceFountAttribute::set_allocated_warpiamge(::LunaSDK::Image* warpia
   }
   warpiamge_ = warpiamge;
   // @@protoc_insertion_point(field_set_allocated:LunaSDK.FaceFountAttribute.WarpIamge)
+}
+
+// .LunaSDK.HeadPoseFaceFountAttribute HeadPos = 4;
+inline bool FaceFountAttribute::has_headpos() const {
+  return this != internal_default_instance() && headpos_ != NULL;
+}
+inline void FaceFountAttribute::clear_headpos() {
+  if (GetArenaNoVirtual() == NULL && headpos_ != NULL) {
+    delete headpos_;
+  }
+  headpos_ = NULL;
+}
+inline const ::LunaSDK::HeadPoseFaceFountAttribute& FaceFountAttribute::_internal_headpos() const {
+  return *headpos_;
+}
+inline const ::LunaSDK::HeadPoseFaceFountAttribute& FaceFountAttribute::headpos() const {
+  const ::LunaSDK::HeadPoseFaceFountAttribute* p = headpos_;
+  // @@protoc_insertion_point(field_get:LunaSDK.FaceFountAttribute.HeadPos)
+  return p != NULL ? *p : *reinterpret_cast<const ::LunaSDK::HeadPoseFaceFountAttribute*>(
+      &::LunaSDK::_HeadPoseFaceFountAttribute_default_instance_);
+}
+inline ::LunaSDK::HeadPoseFaceFountAttribute* FaceFountAttribute::release_headpos() {
+  // @@protoc_insertion_point(field_release:LunaSDK.FaceFountAttribute.HeadPos)
+  
+  ::LunaSDK::HeadPoseFaceFountAttribute* temp = headpos_;
+  headpos_ = NULL;
+  return temp;
+}
+inline ::LunaSDK::HeadPoseFaceFountAttribute* FaceFountAttribute::mutable_headpos() {
+  
+  if (headpos_ == NULL) {
+    auto* p = CreateMaybeMessage<::LunaSDK::HeadPoseFaceFountAttribute>(GetArenaNoVirtual());
+    headpos_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:LunaSDK.FaceFountAttribute.HeadPos)
+  return headpos_;
+}
+inline void FaceFountAttribute::set_allocated_headpos(::LunaSDK::HeadPoseFaceFountAttribute* headpos) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete headpos_;
+  }
+  if (headpos) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      headpos = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, headpos, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  headpos_ = headpos;
+  // @@protoc_insertion_point(field_set_allocated:LunaSDK.FaceFountAttribute.HeadPos)
+}
+
+// .LunaSDK.QualityFaceFountAttribute Quality = 5;
+inline bool FaceFountAttribute::has_quality() const {
+  return this != internal_default_instance() && quality_ != NULL;
+}
+inline void FaceFountAttribute::clear_quality() {
+  if (GetArenaNoVirtual() == NULL && quality_ != NULL) {
+    delete quality_;
+  }
+  quality_ = NULL;
+}
+inline const ::LunaSDK::QualityFaceFountAttribute& FaceFountAttribute::_internal_quality() const {
+  return *quality_;
+}
+inline const ::LunaSDK::QualityFaceFountAttribute& FaceFountAttribute::quality() const {
+  const ::LunaSDK::QualityFaceFountAttribute* p = quality_;
+  // @@protoc_insertion_point(field_get:LunaSDK.FaceFountAttribute.Quality)
+  return p != NULL ? *p : *reinterpret_cast<const ::LunaSDK::QualityFaceFountAttribute*>(
+      &::LunaSDK::_QualityFaceFountAttribute_default_instance_);
+}
+inline ::LunaSDK::QualityFaceFountAttribute* FaceFountAttribute::release_quality() {
+  // @@protoc_insertion_point(field_release:LunaSDK.FaceFountAttribute.Quality)
+  
+  ::LunaSDK::QualityFaceFountAttribute* temp = quality_;
+  quality_ = NULL;
+  return temp;
+}
+inline ::LunaSDK::QualityFaceFountAttribute* FaceFountAttribute::mutable_quality() {
+  
+  if (quality_ == NULL) {
+    auto* p = CreateMaybeMessage<::LunaSDK::QualityFaceFountAttribute>(GetArenaNoVirtual());
+    quality_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:LunaSDK.FaceFountAttribute.Quality)
+  return quality_;
+}
+inline void FaceFountAttribute::set_allocated_quality(::LunaSDK::QualityFaceFountAttribute* quality) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete quality_;
+  }
+  if (quality) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      quality = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, quality, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  quality_ = quality;
+  // @@protoc_insertion_point(field_set_allocated:LunaSDK.FaceFountAttribute.Quality)
 }
 
 // -------------------------------------------------------------------
