@@ -37,7 +37,7 @@ class GreeterServiceImpl final : public LunaSDKServer::Service {
   {
     std::string prefix("Hello ");
     //reply->set_message(prefix + request->name());
-    std::cout<< "Proccesing"<<std::endl;
+    std::cout<< "Proccesing : Image len = "<<request->image_date_size()<< " size = { H"<< request->height()<<" : W"<<request->width() <<"}" <<std::endl;
     return Status::OK;
   }
 };
