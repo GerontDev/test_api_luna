@@ -45,7 +45,7 @@ struct TableStruct {
 };
 void AddDescriptors();
 }  // namespace protobuf_test_5fapi_2eproto
-namespace LunaSDKService {
+namespace LunaSDK {
 class FaceFountAttribute;
 class FaceFountAttributeDefaultTypeInternal;
 extern FaceFountAttributeDefaultTypeInternal _FaceFountAttribute_default_instance_;
@@ -67,23 +67,23 @@ extern QualityFaceFountAttributeDefaultTypeInternal _QualityFaceFountAttribute_d
 class Rectangle;
 class RectangleDefaultTypeInternal;
 extern RectangleDefaultTypeInternal _Rectangle_default_instance_;
-}  // namespace LunaSDKService
+}  // namespace LunaSDK
 namespace google {
 namespace protobuf {
-template<> ::LunaSDKService::FaceFountAttribute* Arena::CreateMaybeMessage<::LunaSDKService::FaceFountAttribute>(Arena*);
-template<> ::LunaSDKService::HeadPoseFaceFountAttribute* Arena::CreateMaybeMessage<::LunaSDKService::HeadPoseFaceFountAttribute>(Arena*);
-template<> ::LunaSDKService::Image* Arena::CreateMaybeMessage<::LunaSDKService::Image>(Arena*);
-template<> ::LunaSDKService::ImageProccesing* Arena::CreateMaybeMessage<::LunaSDKService::ImageProccesing>(Arena*);
-template<> ::LunaSDKService::ImageProccessingResult* Arena::CreateMaybeMessage<::LunaSDKService::ImageProccessingResult>(Arena*);
-template<> ::LunaSDKService::QualityFaceFountAttribute* Arena::CreateMaybeMessage<::LunaSDKService::QualityFaceFountAttribute>(Arena*);
-template<> ::LunaSDKService::Rectangle* Arena::CreateMaybeMessage<::LunaSDKService::Rectangle>(Arena*);
+template<> ::LunaSDK::FaceFountAttribute* Arena::CreateMaybeMessage<::LunaSDK::FaceFountAttribute>(Arena*);
+template<> ::LunaSDK::HeadPoseFaceFountAttribute* Arena::CreateMaybeMessage<::LunaSDK::HeadPoseFaceFountAttribute>(Arena*);
+template<> ::LunaSDK::Image* Arena::CreateMaybeMessage<::LunaSDK::Image>(Arena*);
+template<> ::LunaSDK::ImageProccesing* Arena::CreateMaybeMessage<::LunaSDK::ImageProccesing>(Arena*);
+template<> ::LunaSDK::ImageProccessingResult* Arena::CreateMaybeMessage<::LunaSDK::ImageProccessingResult>(Arena*);
+template<> ::LunaSDK::QualityFaceFountAttribute* Arena::CreateMaybeMessage<::LunaSDK::QualityFaceFountAttribute>(Arena*);
+template<> ::LunaSDK::Rectangle* Arena::CreateMaybeMessage<::LunaSDK::Rectangle>(Arena*);
 }  // namespace protobuf
 }  // namespace google
-namespace LunaSDKService {
+namespace LunaSDK {
 
 // ===================================================================
 
-class Image : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:LunaSDKService.Image) */ {
+class Image : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:LunaSDK.Image) */ {
  public:
   Image();
   virtual ~Image();
@@ -202,7 +202,7 @@ class Image : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::google::protobuf::int32 image_date_size() const;
   void set_image_date_size(::google::protobuf::int32 value);
 
-  // @@protoc_insertion_point(class_scope:LunaSDKService.Image)
+  // @@protoc_insertion_point(class_scope:LunaSDK.Image)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -215,7 +215,7 @@ class Image : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
 };
 // -------------------------------------------------------------------
 
-class ImageProccesing : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:LunaSDKService.ImageProccesing) */ {
+class ImageProccesing : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:LunaSDK.ImageProccesing) */ {
  public:
   ImageProccesing();
   virtual ~ImageProccesing();
@@ -302,17 +302,17 @@ class ImageProccesing : public ::google::protobuf::Message /* @@protoc_insertion
 
   // accessors -------------------------------------------------------
 
-  // .LunaSDKService.Image Photo = 2;
+  // .LunaSDK.Image Photo = 2;
   bool has_photo() const;
   void clear_photo();
   static const int kPhotoFieldNumber = 2;
   private:
-  const ::LunaSDKService::Image& _internal_photo() const;
+  const ::LunaSDK::Image& _internal_photo() const;
   public:
-  const ::LunaSDKService::Image& photo() const;
-  ::LunaSDKService::Image* release_photo();
-  ::LunaSDKService::Image* mutable_photo();
-  void set_allocated_photo(::LunaSDKService::Image* photo);
+  const ::LunaSDK::Image& photo() const;
+  ::LunaSDK::Image* release_photo();
+  ::LunaSDK::Image* mutable_photo();
+  void set_allocated_photo(::LunaSDK::Image* photo);
 
   // int32 ID_Request = 1;
   void clear_id_request();
@@ -320,18 +320,18 @@ class ImageProccesing : public ::google::protobuf::Message /* @@protoc_insertion
   ::google::protobuf::int32 id_request() const;
   void set_id_request(::google::protobuf::int32 value);
 
-  // @@protoc_insertion_point(class_scope:LunaSDKService.ImageProccesing)
+  // @@protoc_insertion_point(class_scope:LunaSDK.ImageProccesing)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::LunaSDKService::Image* photo_;
+  ::LunaSDK::Image* photo_;
   ::google::protobuf::int32 id_request_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_test_5fapi_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class QualityFaceFountAttribute : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:LunaSDKService.QualityFaceFountAttribute) */ {
+class QualityFaceFountAttribute : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:LunaSDK.QualityFaceFountAttribute) */ {
  public:
   QualityFaceFountAttribute();
   virtual ~QualityFaceFountAttribute();
@@ -454,7 +454,7 @@ class QualityFaceFountAttribute : public ::google::protobuf::Message /* @@protoc
   double threshold() const;
   void set_threshold(double value);
 
-  // @@protoc_insertion_point(class_scope:LunaSDKService.QualityFaceFountAttribute)
+  // @@protoc_insertion_point(class_scope:LunaSDK.QualityFaceFountAttribute)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -469,7 +469,7 @@ class QualityFaceFountAttribute : public ::google::protobuf::Message /* @@protoc
 };
 // -------------------------------------------------------------------
 
-class HeadPoseFaceFountAttribute : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:LunaSDKService.HeadPoseFaceFountAttribute) */ {
+class HeadPoseFaceFountAttribute : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:LunaSDK.HeadPoseFaceFountAttribute) */ {
  public:
   HeadPoseFaceFountAttribute();
   virtual ~HeadPoseFaceFountAttribute();
@@ -574,7 +574,7 @@ class HeadPoseFaceFountAttribute : public ::google::protobuf::Message /* @@proto
   float rool() const;
   void set_rool(float value);
 
-  // @@protoc_insertion_point(class_scope:LunaSDKService.HeadPoseFaceFountAttribute)
+  // @@protoc_insertion_point(class_scope:LunaSDK.HeadPoseFaceFountAttribute)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -586,7 +586,7 @@ class HeadPoseFaceFountAttribute : public ::google::protobuf::Message /* @@proto
 };
 // -------------------------------------------------------------------
 
-class Rectangle : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:LunaSDKService.Rectangle) */ {
+class Rectangle : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:LunaSDK.Rectangle) */ {
  public:
   Rectangle();
   virtual ~Rectangle();
@@ -697,7 +697,7 @@ class Rectangle : public ::google::protobuf::Message /* @@protoc_insertion_point
   ::google::protobuf::int32 height() const;
   void set_height(::google::protobuf::int32 value);
 
-  // @@protoc_insertion_point(class_scope:LunaSDKService.Rectangle)
+  // @@protoc_insertion_point(class_scope:LunaSDK.Rectangle)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -710,7 +710,7 @@ class Rectangle : public ::google::protobuf::Message /* @@protoc_insertion_point
 };
 // -------------------------------------------------------------------
 
-class FaceFountAttribute : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:LunaSDKService.FaceFountAttribute) */ {
+class FaceFountAttribute : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:LunaSDK.FaceFountAttribute) */ {
  public:
   FaceFountAttribute();
   virtual ~FaceFountAttribute();
@@ -797,29 +797,29 @@ class FaceFountAttribute : public ::google::protobuf::Message /* @@protoc_insert
 
   // accessors -------------------------------------------------------
 
-  // .LunaSDKService.Rectangle rect = 1;
+  // .LunaSDK.Rectangle rect = 1;
   bool has_rect() const;
   void clear_rect();
   static const int kRectFieldNumber = 1;
   private:
-  const ::LunaSDKService::Rectangle& _internal_rect() const;
+  const ::LunaSDK::Rectangle& _internal_rect() const;
   public:
-  const ::LunaSDKService::Rectangle& rect() const;
-  ::LunaSDKService::Rectangle* release_rect();
-  ::LunaSDKService::Rectangle* mutable_rect();
-  void set_allocated_rect(::LunaSDKService::Rectangle* rect);
+  const ::LunaSDK::Rectangle& rect() const;
+  ::LunaSDK::Rectangle* release_rect();
+  ::LunaSDK::Rectangle* mutable_rect();
+  void set_allocated_rect(::LunaSDK::Rectangle* rect);
 
-  // .LunaSDKService.Image WarpIamge = 3;
+  // .LunaSDK.Image WarpIamge = 3;
   bool has_warpiamge() const;
   void clear_warpiamge();
   static const int kWarpIamgeFieldNumber = 3;
   private:
-  const ::LunaSDKService::Image& _internal_warpiamge() const;
+  const ::LunaSDK::Image& _internal_warpiamge() const;
   public:
-  const ::LunaSDKService::Image& warpiamge() const;
-  ::LunaSDKService::Image* release_warpiamge();
-  ::LunaSDKService::Image* mutable_warpiamge();
-  void set_allocated_warpiamge(::LunaSDKService::Image* warpiamge);
+  const ::LunaSDK::Image& warpiamge() const;
+  ::LunaSDK::Image* release_warpiamge();
+  ::LunaSDK::Image* mutable_warpiamge();
+  void set_allocated_warpiamge(::LunaSDK::Image* warpiamge);
 
   // double score = 2;
   void clear_score();
@@ -827,19 +827,19 @@ class FaceFountAttribute : public ::google::protobuf::Message /* @@protoc_insert
   double score() const;
   void set_score(double value);
 
-  // @@protoc_insertion_point(class_scope:LunaSDKService.FaceFountAttribute)
+  // @@protoc_insertion_point(class_scope:LunaSDK.FaceFountAttribute)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::LunaSDKService::Rectangle* rect_;
-  ::LunaSDKService::Image* warpiamge_;
+  ::LunaSDK::Rectangle* rect_;
+  ::LunaSDK::Image* warpiamge_;
   double score_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_test_5fapi_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class ImageProccessingResult : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:LunaSDKService.ImageProccessingResult) */ {
+class ImageProccessingResult : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:LunaSDK.ImageProccessingResult) */ {
  public:
   ImageProccessingResult();
   virtual ~ImageProccessingResult();
@@ -926,23 +926,23 @@ class ImageProccessingResult : public ::google::protobuf::Message /* @@protoc_in
 
   // accessors -------------------------------------------------------
 
-  // repeated .LunaSDKService.FaceFountAttribute FaceFounts = 1;
+  // repeated .LunaSDK.FaceFountAttribute FaceFounts = 1;
   int facefounts_size() const;
   void clear_facefounts();
   static const int kFaceFountsFieldNumber = 1;
-  ::LunaSDKService::FaceFountAttribute* mutable_facefounts(int index);
-  ::google::protobuf::RepeatedPtrField< ::LunaSDKService::FaceFountAttribute >*
+  ::LunaSDK::FaceFountAttribute* mutable_facefounts(int index);
+  ::google::protobuf::RepeatedPtrField< ::LunaSDK::FaceFountAttribute >*
       mutable_facefounts();
-  const ::LunaSDKService::FaceFountAttribute& facefounts(int index) const;
-  ::LunaSDKService::FaceFountAttribute* add_facefounts();
-  const ::google::protobuf::RepeatedPtrField< ::LunaSDKService::FaceFountAttribute >&
+  const ::LunaSDK::FaceFountAttribute& facefounts(int index) const;
+  ::LunaSDK::FaceFountAttribute* add_facefounts();
+  const ::google::protobuf::RepeatedPtrField< ::LunaSDK::FaceFountAttribute >&
       facefounts() const;
 
-  // @@protoc_insertion_point(class_scope:LunaSDKService.ImageProccessingResult)
+  // @@protoc_insertion_point(class_scope:LunaSDK.ImageProccessingResult)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::LunaSDKService::FaceFountAttribute > facefounts_;
+  ::google::protobuf::RepeatedPtrField< ::LunaSDK::FaceFountAttribute > facefounts_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_test_5fapi_2eproto::TableStruct;
 };
@@ -962,13 +962,13 @@ inline void Image::clear_width() {
   width_ = 0;
 }
 inline ::google::protobuf::int32 Image::width() const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.Image.width)
+  // @@protoc_insertion_point(field_get:LunaSDK.Image.width)
   return width_;
 }
 inline void Image::set_width(::google::protobuf::int32 value) {
   
   width_ = value;
-  // @@protoc_insertion_point(field_set:LunaSDKService.Image.width)
+  // @@protoc_insertion_point(field_set:LunaSDK.Image.width)
 }
 
 // int32 height = 2;
@@ -976,13 +976,13 @@ inline void Image::clear_height() {
   height_ = 0;
 }
 inline ::google::protobuf::int32 Image::height() const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.Image.height)
+  // @@protoc_insertion_point(field_get:LunaSDK.Image.height)
   return height_;
 }
 inline void Image::set_height(::google::protobuf::int32 value) {
   
   height_ = value;
-  // @@protoc_insertion_point(field_set:LunaSDKService.Image.height)
+  // @@protoc_insertion_point(field_set:LunaSDK.Image.height)
 }
 
 // int32 image_date_size = 3;
@@ -990,13 +990,13 @@ inline void Image::clear_image_date_size() {
   image_date_size_ = 0;
 }
 inline ::google::protobuf::int32 Image::image_date_size() const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.Image.image_date_size)
+  // @@protoc_insertion_point(field_get:LunaSDK.Image.image_date_size)
   return image_date_size_;
 }
 inline void Image::set_image_date_size(::google::protobuf::int32 value) {
   
   image_date_size_ = value;
-  // @@protoc_insertion_point(field_set:LunaSDKService.Image.image_date_size)
+  // @@protoc_insertion_point(field_set:LunaSDK.Image.image_date_size)
 }
 
 // bytes image_date = 4;
@@ -1004,41 +1004,41 @@ inline void Image::clear_image_date() {
   image_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& Image::image_date() const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.Image.image_date)
+  // @@protoc_insertion_point(field_get:LunaSDK.Image.image_date)
   return image_date_.GetNoArena();
 }
 inline void Image::set_image_date(const ::std::string& value) {
   
   image_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:LunaSDKService.Image.image_date)
+  // @@protoc_insertion_point(field_set:LunaSDK.Image.image_date)
 }
 #if LANG_CXX11
 inline void Image::set_image_date(::std::string&& value) {
   
   image_date_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:LunaSDKService.Image.image_date)
+  // @@protoc_insertion_point(field_set_rvalue:LunaSDK.Image.image_date)
 }
 #endif
 inline void Image::set_image_date(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   image_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:LunaSDKService.Image.image_date)
+  // @@protoc_insertion_point(field_set_char:LunaSDK.Image.image_date)
 }
 inline void Image::set_image_date(const void* value, size_t size) {
   
   image_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:LunaSDKService.Image.image_date)
+  // @@protoc_insertion_point(field_set_pointer:LunaSDK.Image.image_date)
 }
 inline ::std::string* Image::mutable_image_date() {
   
-  // @@protoc_insertion_point(field_mutable:LunaSDKService.Image.image_date)
+  // @@protoc_insertion_point(field_mutable:LunaSDK.Image.image_date)
   return image_date_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Image::release_image_date() {
-  // @@protoc_insertion_point(field_release:LunaSDKService.Image.image_date)
+  // @@protoc_insertion_point(field_release:LunaSDK.Image.image_date)
   
   return image_date_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1049,7 +1049,7 @@ inline void Image::set_allocated_image_date(::std::string* image_date) {
     
   }
   image_date_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), image_date);
-  // @@protoc_insertion_point(field_set_allocated:LunaSDKService.Image.image_date)
+  // @@protoc_insertion_point(field_set_allocated:LunaSDK.Image.image_date)
 }
 
 // -------------------------------------------------------------------
@@ -1061,16 +1061,16 @@ inline void ImageProccesing::clear_id_request() {
   id_request_ = 0;
 }
 inline ::google::protobuf::int32 ImageProccesing::id_request() const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.ImageProccesing.ID_Request)
+  // @@protoc_insertion_point(field_get:LunaSDK.ImageProccesing.ID_Request)
   return id_request_;
 }
 inline void ImageProccesing::set_id_request(::google::protobuf::int32 value) {
   
   id_request_ = value;
-  // @@protoc_insertion_point(field_set:LunaSDKService.ImageProccesing.ID_Request)
+  // @@protoc_insertion_point(field_set:LunaSDK.ImageProccesing.ID_Request)
 }
 
-// .LunaSDKService.Image Photo = 2;
+// .LunaSDK.Image Photo = 2;
 inline bool ImageProccesing::has_photo() const {
   return this != internal_default_instance() && photo_ != NULL;
 }
@@ -1080,32 +1080,32 @@ inline void ImageProccesing::clear_photo() {
   }
   photo_ = NULL;
 }
-inline const ::LunaSDKService::Image& ImageProccesing::_internal_photo() const {
+inline const ::LunaSDK::Image& ImageProccesing::_internal_photo() const {
   return *photo_;
 }
-inline const ::LunaSDKService::Image& ImageProccesing::photo() const {
-  const ::LunaSDKService::Image* p = photo_;
-  // @@protoc_insertion_point(field_get:LunaSDKService.ImageProccesing.Photo)
-  return p != NULL ? *p : *reinterpret_cast<const ::LunaSDKService::Image*>(
-      &::LunaSDKService::_Image_default_instance_);
+inline const ::LunaSDK::Image& ImageProccesing::photo() const {
+  const ::LunaSDK::Image* p = photo_;
+  // @@protoc_insertion_point(field_get:LunaSDK.ImageProccesing.Photo)
+  return p != NULL ? *p : *reinterpret_cast<const ::LunaSDK::Image*>(
+      &::LunaSDK::_Image_default_instance_);
 }
-inline ::LunaSDKService::Image* ImageProccesing::release_photo() {
-  // @@protoc_insertion_point(field_release:LunaSDKService.ImageProccesing.Photo)
+inline ::LunaSDK::Image* ImageProccesing::release_photo() {
+  // @@protoc_insertion_point(field_release:LunaSDK.ImageProccesing.Photo)
   
-  ::LunaSDKService::Image* temp = photo_;
+  ::LunaSDK::Image* temp = photo_;
   photo_ = NULL;
   return temp;
 }
-inline ::LunaSDKService::Image* ImageProccesing::mutable_photo() {
+inline ::LunaSDK::Image* ImageProccesing::mutable_photo() {
   
   if (photo_ == NULL) {
-    auto* p = CreateMaybeMessage<::LunaSDKService::Image>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::LunaSDK::Image>(GetArenaNoVirtual());
     photo_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:LunaSDKService.ImageProccesing.Photo)
+  // @@protoc_insertion_point(field_mutable:LunaSDK.ImageProccesing.Photo)
   return photo_;
 }
-inline void ImageProccesing::set_allocated_photo(::LunaSDKService::Image* photo) {
+inline void ImageProccesing::set_allocated_photo(::LunaSDK::Image* photo) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete photo_;
@@ -1121,7 +1121,7 @@ inline void ImageProccesing::set_allocated_photo(::LunaSDKService::Image* photo)
     
   }
   photo_ = photo;
-  // @@protoc_insertion_point(field_set_allocated:LunaSDKService.ImageProccesing.Photo)
+  // @@protoc_insertion_point(field_set_allocated:LunaSDK.ImageProccesing.Photo)
 }
 
 // -------------------------------------------------------------------
@@ -1133,13 +1133,13 @@ inline void QualityFaceFountAttribute::clear_dark() {
   dark_ = 0;
 }
 inline double QualityFaceFountAttribute::dark() const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.QualityFaceFountAttribute.dark)
+  // @@protoc_insertion_point(field_get:LunaSDK.QualityFaceFountAttribute.dark)
   return dark_;
 }
 inline void QualityFaceFountAttribute::set_dark(double value) {
   
   dark_ = value;
-  // @@protoc_insertion_point(field_set:LunaSDKService.QualityFaceFountAttribute.dark)
+  // @@protoc_insertion_point(field_set:LunaSDK.QualityFaceFountAttribute.dark)
 }
 
 // double ligth = 2;
@@ -1147,13 +1147,13 @@ inline void QualityFaceFountAttribute::clear_ligth() {
   ligth_ = 0;
 }
 inline double QualityFaceFountAttribute::ligth() const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.QualityFaceFountAttribute.ligth)
+  // @@protoc_insertion_point(field_get:LunaSDK.QualityFaceFountAttribute.ligth)
   return ligth_;
 }
 inline void QualityFaceFountAttribute::set_ligth(double value) {
   
   ligth_ = value;
-  // @@protoc_insertion_point(field_set:LunaSDKService.QualityFaceFountAttribute.ligth)
+  // @@protoc_insertion_point(field_set:LunaSDK.QualityFaceFountAttribute.ligth)
 }
 
 // double gray = 3;
@@ -1161,13 +1161,13 @@ inline void QualityFaceFountAttribute::clear_gray() {
   gray_ = 0;
 }
 inline double QualityFaceFountAttribute::gray() const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.QualityFaceFountAttribute.gray)
+  // @@protoc_insertion_point(field_get:LunaSDK.QualityFaceFountAttribute.gray)
   return gray_;
 }
 inline void QualityFaceFountAttribute::set_gray(double value) {
   
   gray_ = value;
-  // @@protoc_insertion_point(field_set:LunaSDKService.QualityFaceFountAttribute.gray)
+  // @@protoc_insertion_point(field_set:LunaSDK.QualityFaceFountAttribute.gray)
 }
 
 // double blur = 4;
@@ -1175,13 +1175,13 @@ inline void QualityFaceFountAttribute::clear_blur() {
   blur_ = 0;
 }
 inline double QualityFaceFountAttribute::blur() const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.QualityFaceFountAttribute.blur)
+  // @@protoc_insertion_point(field_get:LunaSDK.QualityFaceFountAttribute.blur)
   return blur_;
 }
 inline void QualityFaceFountAttribute::set_blur(double value) {
   
   blur_ = value;
-  // @@protoc_insertion_point(field_set:LunaSDKService.QualityFaceFountAttribute.blur)
+  // @@protoc_insertion_point(field_set:LunaSDK.QualityFaceFountAttribute.blur)
 }
 
 // double quality = 5;
@@ -1189,13 +1189,13 @@ inline void QualityFaceFountAttribute::clear_quality() {
   quality_ = 0;
 }
 inline double QualityFaceFountAttribute::quality() const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.QualityFaceFountAttribute.quality)
+  // @@protoc_insertion_point(field_get:LunaSDK.QualityFaceFountAttribute.quality)
   return quality_;
 }
 inline void QualityFaceFountAttribute::set_quality(double value) {
   
   quality_ = value;
-  // @@protoc_insertion_point(field_set:LunaSDKService.QualityFaceFountAttribute.quality)
+  // @@protoc_insertion_point(field_set:LunaSDK.QualityFaceFountAttribute.quality)
 }
 
 // double threshold = 6;
@@ -1203,13 +1203,13 @@ inline void QualityFaceFountAttribute::clear_threshold() {
   threshold_ = 0;
 }
 inline double QualityFaceFountAttribute::threshold() const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.QualityFaceFountAttribute.threshold)
+  // @@protoc_insertion_point(field_get:LunaSDK.QualityFaceFountAttribute.threshold)
   return threshold_;
 }
 inline void QualityFaceFountAttribute::set_threshold(double value) {
   
   threshold_ = value;
-  // @@protoc_insertion_point(field_set:LunaSDKService.QualityFaceFountAttribute.threshold)
+  // @@protoc_insertion_point(field_set:LunaSDK.QualityFaceFountAttribute.threshold)
 }
 
 // -------------------------------------------------------------------
@@ -1221,13 +1221,13 @@ inline void HeadPoseFaceFountAttribute::clear_pitch() {
   pitch_ = 0;
 }
 inline float HeadPoseFaceFountAttribute::pitch() const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.HeadPoseFaceFountAttribute.pitch)
+  // @@protoc_insertion_point(field_get:LunaSDK.HeadPoseFaceFountAttribute.pitch)
   return pitch_;
 }
 inline void HeadPoseFaceFountAttribute::set_pitch(float value) {
   
   pitch_ = value;
-  // @@protoc_insertion_point(field_set:LunaSDKService.HeadPoseFaceFountAttribute.pitch)
+  // @@protoc_insertion_point(field_set:LunaSDK.HeadPoseFaceFountAttribute.pitch)
 }
 
 // float yam = 2;
@@ -1235,13 +1235,13 @@ inline void HeadPoseFaceFountAttribute::clear_yam() {
   yam_ = 0;
 }
 inline float HeadPoseFaceFountAttribute::yam() const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.HeadPoseFaceFountAttribute.yam)
+  // @@protoc_insertion_point(field_get:LunaSDK.HeadPoseFaceFountAttribute.yam)
   return yam_;
 }
 inline void HeadPoseFaceFountAttribute::set_yam(float value) {
   
   yam_ = value;
-  // @@protoc_insertion_point(field_set:LunaSDKService.HeadPoseFaceFountAttribute.yam)
+  // @@protoc_insertion_point(field_set:LunaSDK.HeadPoseFaceFountAttribute.yam)
 }
 
 // float rool = 3;
@@ -1249,13 +1249,13 @@ inline void HeadPoseFaceFountAttribute::clear_rool() {
   rool_ = 0;
 }
 inline float HeadPoseFaceFountAttribute::rool() const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.HeadPoseFaceFountAttribute.rool)
+  // @@protoc_insertion_point(field_get:LunaSDK.HeadPoseFaceFountAttribute.rool)
   return rool_;
 }
 inline void HeadPoseFaceFountAttribute::set_rool(float value) {
   
   rool_ = value;
-  // @@protoc_insertion_point(field_set:LunaSDKService.HeadPoseFaceFountAttribute.rool)
+  // @@protoc_insertion_point(field_set:LunaSDK.HeadPoseFaceFountAttribute.rool)
 }
 
 // -------------------------------------------------------------------
@@ -1267,13 +1267,13 @@ inline void Rectangle::clear_x() {
   x_ = 0;
 }
 inline ::google::protobuf::int32 Rectangle::x() const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.Rectangle.x)
+  // @@protoc_insertion_point(field_get:LunaSDK.Rectangle.x)
   return x_;
 }
 inline void Rectangle::set_x(::google::protobuf::int32 value) {
   
   x_ = value;
-  // @@protoc_insertion_point(field_set:LunaSDKService.Rectangle.x)
+  // @@protoc_insertion_point(field_set:LunaSDK.Rectangle.x)
 }
 
 // int32 y = 2;
@@ -1281,13 +1281,13 @@ inline void Rectangle::clear_y() {
   y_ = 0;
 }
 inline ::google::protobuf::int32 Rectangle::y() const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.Rectangle.y)
+  // @@protoc_insertion_point(field_get:LunaSDK.Rectangle.y)
   return y_;
 }
 inline void Rectangle::set_y(::google::protobuf::int32 value) {
   
   y_ = value;
-  // @@protoc_insertion_point(field_set:LunaSDKService.Rectangle.y)
+  // @@protoc_insertion_point(field_set:LunaSDK.Rectangle.y)
 }
 
 // int32 width = 3;
@@ -1295,13 +1295,13 @@ inline void Rectangle::clear_width() {
   width_ = 0;
 }
 inline ::google::protobuf::int32 Rectangle::width() const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.Rectangle.width)
+  // @@protoc_insertion_point(field_get:LunaSDK.Rectangle.width)
   return width_;
 }
 inline void Rectangle::set_width(::google::protobuf::int32 value) {
   
   width_ = value;
-  // @@protoc_insertion_point(field_set:LunaSDKService.Rectangle.width)
+  // @@protoc_insertion_point(field_set:LunaSDK.Rectangle.width)
 }
 
 // int32 height = 4;
@@ -1309,20 +1309,20 @@ inline void Rectangle::clear_height() {
   height_ = 0;
 }
 inline ::google::protobuf::int32 Rectangle::height() const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.Rectangle.height)
+  // @@protoc_insertion_point(field_get:LunaSDK.Rectangle.height)
   return height_;
 }
 inline void Rectangle::set_height(::google::protobuf::int32 value) {
   
   height_ = value;
-  // @@protoc_insertion_point(field_set:LunaSDKService.Rectangle.height)
+  // @@protoc_insertion_point(field_set:LunaSDK.Rectangle.height)
 }
 
 // -------------------------------------------------------------------
 
 // FaceFountAttribute
 
-// .LunaSDKService.Rectangle rect = 1;
+// .LunaSDK.Rectangle rect = 1;
 inline bool FaceFountAttribute::has_rect() const {
   return this != internal_default_instance() && rect_ != NULL;
 }
@@ -1332,32 +1332,32 @@ inline void FaceFountAttribute::clear_rect() {
   }
   rect_ = NULL;
 }
-inline const ::LunaSDKService::Rectangle& FaceFountAttribute::_internal_rect() const {
+inline const ::LunaSDK::Rectangle& FaceFountAttribute::_internal_rect() const {
   return *rect_;
 }
-inline const ::LunaSDKService::Rectangle& FaceFountAttribute::rect() const {
-  const ::LunaSDKService::Rectangle* p = rect_;
-  // @@protoc_insertion_point(field_get:LunaSDKService.FaceFountAttribute.rect)
-  return p != NULL ? *p : *reinterpret_cast<const ::LunaSDKService::Rectangle*>(
-      &::LunaSDKService::_Rectangle_default_instance_);
+inline const ::LunaSDK::Rectangle& FaceFountAttribute::rect() const {
+  const ::LunaSDK::Rectangle* p = rect_;
+  // @@protoc_insertion_point(field_get:LunaSDK.FaceFountAttribute.rect)
+  return p != NULL ? *p : *reinterpret_cast<const ::LunaSDK::Rectangle*>(
+      &::LunaSDK::_Rectangle_default_instance_);
 }
-inline ::LunaSDKService::Rectangle* FaceFountAttribute::release_rect() {
-  // @@protoc_insertion_point(field_release:LunaSDKService.FaceFountAttribute.rect)
+inline ::LunaSDK::Rectangle* FaceFountAttribute::release_rect() {
+  // @@protoc_insertion_point(field_release:LunaSDK.FaceFountAttribute.rect)
   
-  ::LunaSDKService::Rectangle* temp = rect_;
+  ::LunaSDK::Rectangle* temp = rect_;
   rect_ = NULL;
   return temp;
 }
-inline ::LunaSDKService::Rectangle* FaceFountAttribute::mutable_rect() {
+inline ::LunaSDK::Rectangle* FaceFountAttribute::mutable_rect() {
   
   if (rect_ == NULL) {
-    auto* p = CreateMaybeMessage<::LunaSDKService::Rectangle>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::LunaSDK::Rectangle>(GetArenaNoVirtual());
     rect_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:LunaSDKService.FaceFountAttribute.rect)
+  // @@protoc_insertion_point(field_mutable:LunaSDK.FaceFountAttribute.rect)
   return rect_;
 }
-inline void FaceFountAttribute::set_allocated_rect(::LunaSDKService::Rectangle* rect) {
+inline void FaceFountAttribute::set_allocated_rect(::LunaSDK::Rectangle* rect) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete rect_;
@@ -1373,7 +1373,7 @@ inline void FaceFountAttribute::set_allocated_rect(::LunaSDKService::Rectangle* 
     
   }
   rect_ = rect;
-  // @@protoc_insertion_point(field_set_allocated:LunaSDKService.FaceFountAttribute.rect)
+  // @@protoc_insertion_point(field_set_allocated:LunaSDK.FaceFountAttribute.rect)
 }
 
 // double score = 2;
@@ -1381,16 +1381,16 @@ inline void FaceFountAttribute::clear_score() {
   score_ = 0;
 }
 inline double FaceFountAttribute::score() const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.FaceFountAttribute.score)
+  // @@protoc_insertion_point(field_get:LunaSDK.FaceFountAttribute.score)
   return score_;
 }
 inline void FaceFountAttribute::set_score(double value) {
   
   score_ = value;
-  // @@protoc_insertion_point(field_set:LunaSDKService.FaceFountAttribute.score)
+  // @@protoc_insertion_point(field_set:LunaSDK.FaceFountAttribute.score)
 }
 
-// .LunaSDKService.Image WarpIamge = 3;
+// .LunaSDK.Image WarpIamge = 3;
 inline bool FaceFountAttribute::has_warpiamge() const {
   return this != internal_default_instance() && warpiamge_ != NULL;
 }
@@ -1400,32 +1400,32 @@ inline void FaceFountAttribute::clear_warpiamge() {
   }
   warpiamge_ = NULL;
 }
-inline const ::LunaSDKService::Image& FaceFountAttribute::_internal_warpiamge() const {
+inline const ::LunaSDK::Image& FaceFountAttribute::_internal_warpiamge() const {
   return *warpiamge_;
 }
-inline const ::LunaSDKService::Image& FaceFountAttribute::warpiamge() const {
-  const ::LunaSDKService::Image* p = warpiamge_;
-  // @@protoc_insertion_point(field_get:LunaSDKService.FaceFountAttribute.WarpIamge)
-  return p != NULL ? *p : *reinterpret_cast<const ::LunaSDKService::Image*>(
-      &::LunaSDKService::_Image_default_instance_);
+inline const ::LunaSDK::Image& FaceFountAttribute::warpiamge() const {
+  const ::LunaSDK::Image* p = warpiamge_;
+  // @@protoc_insertion_point(field_get:LunaSDK.FaceFountAttribute.WarpIamge)
+  return p != NULL ? *p : *reinterpret_cast<const ::LunaSDK::Image*>(
+      &::LunaSDK::_Image_default_instance_);
 }
-inline ::LunaSDKService::Image* FaceFountAttribute::release_warpiamge() {
-  // @@protoc_insertion_point(field_release:LunaSDKService.FaceFountAttribute.WarpIamge)
+inline ::LunaSDK::Image* FaceFountAttribute::release_warpiamge() {
+  // @@protoc_insertion_point(field_release:LunaSDK.FaceFountAttribute.WarpIamge)
   
-  ::LunaSDKService::Image* temp = warpiamge_;
+  ::LunaSDK::Image* temp = warpiamge_;
   warpiamge_ = NULL;
   return temp;
 }
-inline ::LunaSDKService::Image* FaceFountAttribute::mutable_warpiamge() {
+inline ::LunaSDK::Image* FaceFountAttribute::mutable_warpiamge() {
   
   if (warpiamge_ == NULL) {
-    auto* p = CreateMaybeMessage<::LunaSDKService::Image>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::LunaSDK::Image>(GetArenaNoVirtual());
     warpiamge_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:LunaSDKService.FaceFountAttribute.WarpIamge)
+  // @@protoc_insertion_point(field_mutable:LunaSDK.FaceFountAttribute.WarpIamge)
   return warpiamge_;
 }
-inline void FaceFountAttribute::set_allocated_warpiamge(::LunaSDKService::Image* warpiamge) {
+inline void FaceFountAttribute::set_allocated_warpiamge(::LunaSDK::Image* warpiamge) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete warpiamge_;
@@ -1441,40 +1441,40 @@ inline void FaceFountAttribute::set_allocated_warpiamge(::LunaSDKService::Image*
     
   }
   warpiamge_ = warpiamge;
-  // @@protoc_insertion_point(field_set_allocated:LunaSDKService.FaceFountAttribute.WarpIamge)
+  // @@protoc_insertion_point(field_set_allocated:LunaSDK.FaceFountAttribute.WarpIamge)
 }
 
 // -------------------------------------------------------------------
 
 // ImageProccessingResult
 
-// repeated .LunaSDKService.FaceFountAttribute FaceFounts = 1;
+// repeated .LunaSDK.FaceFountAttribute FaceFounts = 1;
 inline int ImageProccessingResult::facefounts_size() const {
   return facefounts_.size();
 }
 inline void ImageProccessingResult::clear_facefounts() {
   facefounts_.Clear();
 }
-inline ::LunaSDKService::FaceFountAttribute* ImageProccessingResult::mutable_facefounts(int index) {
-  // @@protoc_insertion_point(field_mutable:LunaSDKService.ImageProccessingResult.FaceFounts)
+inline ::LunaSDK::FaceFountAttribute* ImageProccessingResult::mutable_facefounts(int index) {
+  // @@protoc_insertion_point(field_mutable:LunaSDK.ImageProccessingResult.FaceFounts)
   return facefounts_.Mutable(index);
 }
-inline ::google::protobuf::RepeatedPtrField< ::LunaSDKService::FaceFountAttribute >*
+inline ::google::protobuf::RepeatedPtrField< ::LunaSDK::FaceFountAttribute >*
 ImageProccessingResult::mutable_facefounts() {
-  // @@protoc_insertion_point(field_mutable_list:LunaSDKService.ImageProccessingResult.FaceFounts)
+  // @@protoc_insertion_point(field_mutable_list:LunaSDK.ImageProccessingResult.FaceFounts)
   return &facefounts_;
 }
-inline const ::LunaSDKService::FaceFountAttribute& ImageProccessingResult::facefounts(int index) const {
-  // @@protoc_insertion_point(field_get:LunaSDKService.ImageProccessingResult.FaceFounts)
+inline const ::LunaSDK::FaceFountAttribute& ImageProccessingResult::facefounts(int index) const {
+  // @@protoc_insertion_point(field_get:LunaSDK.ImageProccessingResult.FaceFounts)
   return facefounts_.Get(index);
 }
-inline ::LunaSDKService::FaceFountAttribute* ImageProccessingResult::add_facefounts() {
-  // @@protoc_insertion_point(field_add:LunaSDKService.ImageProccessingResult.FaceFounts)
+inline ::LunaSDK::FaceFountAttribute* ImageProccessingResult::add_facefounts() {
+  // @@protoc_insertion_point(field_add:LunaSDK.ImageProccessingResult.FaceFounts)
   return facefounts_.Add();
 }
-inline const ::google::protobuf::RepeatedPtrField< ::LunaSDKService::FaceFountAttribute >&
+inline const ::google::protobuf::RepeatedPtrField< ::LunaSDK::FaceFountAttribute >&
 ImageProccessingResult::facefounts() const {
-  // @@protoc_insertion_point(field_list:LunaSDKService.ImageProccessingResult.FaceFounts)
+  // @@protoc_insertion_point(field_list:LunaSDK.ImageProccessingResult.FaceFounts)
   return facefounts_;
 }
 
@@ -1496,7 +1496,7 @@ ImageProccessingResult::facefounts() const {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace LunaSDKService
+}  // namespace LunaSDK
 
 // @@protoc_insertion_point(global_scope)
 

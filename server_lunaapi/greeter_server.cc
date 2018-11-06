@@ -27,13 +27,12 @@ using grpc::Server;
 using grpc::ServerBuilder;
 using grpc::ServerContext;
 using grpc::Status;
-using LunaSDKService::Image;
-using LunaSDKService::ImageProccessingResult;
-using LunaSDKService::Service;
+using LunaSDK::Image;
+using LunaSDK::ImageProccessingResult;
+using LunaSDK::LunaSDKServer;
 
 // Logic and data behind the server's behavior.
-class GreeterServiceImpl final : public Service
-{
+class GreeterServiceImpl final : public LunaSDKServer::Service {
   Status Proccesing(ServerContext* context, const Image* request, ImageProccessingResult* reply) override
   {
     std::string prefix("Hello ");

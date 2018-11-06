@@ -8,14 +8,9 @@
 
 // [START declaration]
 syntax = "proto3";
-package LunaSDKService;
+package LunaSDK;
 
 // [END declaration]
-
-// [START java_declaration]
-option java_package = "com.LunaSDKService";
-option java_outer_classname = "ImgProcResult";
-// [END java_declaration]
 
 // [START csharp_declaration]
 option csharp_namespace = "Google.Protobuf.LunaSDKService";

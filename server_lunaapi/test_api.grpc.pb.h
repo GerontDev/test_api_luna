@@ -35,47 +35,47 @@ class ServerCompletionQueue;
 class ServerContext;
 }  // namespace grpc
 
-namespace LunaSDKService {
+namespace LunaSDK {
 
 class LunaSDKServer final {
  public:
   static constexpr char const* service_full_name() {
-    return "LunaSDKService.LunaSDKServer";
+    return "LunaSDK.LunaSDKServer";
   }
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    virtual ::grpc::Status Proccesing(::grpc::ClientContext* context, const ::LunaSDKService::Image& request, ::LunaSDKService::ImageProccessingResult* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::LunaSDKService::ImageProccessingResult>> AsyncProccesing(::grpc::ClientContext* context, const ::LunaSDKService::Image& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::LunaSDKService::ImageProccessingResult>>(AsyncProccesingRaw(context, request, cq));
+    virtual ::grpc::Status Proccesing(::grpc::ClientContext* context, const ::LunaSDK::Image& request, ::LunaSDK::ImageProccessingResult* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::LunaSDK::ImageProccessingResult>> AsyncProccesing(::grpc::ClientContext* context, const ::LunaSDK::Image& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::LunaSDK::ImageProccessingResult>>(AsyncProccesingRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::LunaSDKService::ImageProccessingResult>> PrepareAsyncProccesing(::grpc::ClientContext* context, const ::LunaSDKService::Image& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::LunaSDKService::ImageProccessingResult>>(PrepareAsyncProccesingRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::LunaSDK::ImageProccessingResult>> PrepareAsyncProccesing(::grpc::ClientContext* context, const ::LunaSDK::Image& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::LunaSDK::ImageProccessingResult>>(PrepareAsyncProccesingRaw(context, request, cq));
     }
     class experimental_async_interface {
      public:
       virtual ~experimental_async_interface() {}
-      virtual void Proccesing(::grpc::ClientContext* context, const ::LunaSDKService::Image* request, ::LunaSDKService::ImageProccessingResult* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void Proccesing(::grpc::ClientContext* context, const ::LunaSDK::Image* request, ::LunaSDK::ImageProccessingResult* response, std::function<void(::grpc::Status)>) = 0;
     };
     virtual class experimental_async_interface* experimental_async() { return nullptr; }
   private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::LunaSDKService::ImageProccessingResult>* AsyncProccesingRaw(::grpc::ClientContext* context, const ::LunaSDKService::Image& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::LunaSDKService::ImageProccessingResult>* PrepareAsyncProccesingRaw(::grpc::ClientContext* context, const ::LunaSDKService::Image& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::LunaSDK::ImageProccessingResult>* AsyncProccesingRaw(::grpc::ClientContext* context, const ::LunaSDK::Image& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::LunaSDK::ImageProccessingResult>* PrepareAsyncProccesingRaw(::grpc::ClientContext* context, const ::LunaSDK::Image& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel);
-    ::grpc::Status Proccesing(::grpc::ClientContext* context, const ::LunaSDKService::Image& request, ::LunaSDKService::ImageProccessingResult* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::LunaSDKService::ImageProccessingResult>> AsyncProccesing(::grpc::ClientContext* context, const ::LunaSDKService::Image& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::LunaSDKService::ImageProccessingResult>>(AsyncProccesingRaw(context, request, cq));
+    ::grpc::Status Proccesing(::grpc::ClientContext* context, const ::LunaSDK::Image& request, ::LunaSDK::ImageProccessingResult* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::LunaSDK::ImageProccessingResult>> AsyncProccesing(::grpc::ClientContext* context, const ::LunaSDK::Image& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::LunaSDK::ImageProccessingResult>>(AsyncProccesingRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::LunaSDKService::ImageProccessingResult>> PrepareAsyncProccesing(::grpc::ClientContext* context, const ::LunaSDKService::Image& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::LunaSDKService::ImageProccessingResult>>(PrepareAsyncProccesingRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::LunaSDK::ImageProccessingResult>> PrepareAsyncProccesing(::grpc::ClientContext* context, const ::LunaSDK::Image& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::LunaSDK::ImageProccessingResult>>(PrepareAsyncProccesingRaw(context, request, cq));
     }
     class experimental_async final :
       public StubInterface::experimental_async_interface {
      public:
-      void Proccesing(::grpc::ClientContext* context, const ::LunaSDKService::Image* request, ::LunaSDKService::ImageProccessingResult* response, std::function<void(::grpc::Status)>) override;
+      void Proccesing(::grpc::ClientContext* context, const ::LunaSDK::Image* request, ::LunaSDK::ImageProccessingResult* response, std::function<void(::grpc::Status)>) override;
      private:
       friend class Stub;
       explicit experimental_async(Stub* stub): stub_(stub) { }
@@ -87,8 +87,8 @@ class LunaSDKServer final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class experimental_async async_stub_{this};
-    ::grpc::ClientAsyncResponseReader< ::LunaSDKService::ImageProccessingResult>* AsyncProccesingRaw(::grpc::ClientContext* context, const ::LunaSDKService::Image& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::LunaSDKService::ImageProccessingResult>* PrepareAsyncProccesingRaw(::grpc::ClientContext* context, const ::LunaSDKService::Image& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::LunaSDK::ImageProccessingResult>* AsyncProccesingRaw(::grpc::ClientContext* context, const ::LunaSDK::Image& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::LunaSDK::ImageProccessingResult>* PrepareAsyncProccesingRaw(::grpc::ClientContext* context, const ::LunaSDK::Image& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_Proccesing_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
@@ -97,7 +97,7 @@ class LunaSDKServer final {
    public:
     Service();
     virtual ~Service();
-    virtual ::grpc::Status Proccesing(::grpc::ServerContext* context, const ::LunaSDKService::Image* request, ::LunaSDKService::ImageProccessingResult* response);
+    virtual ::grpc::Status Proccesing(::grpc::ServerContext* context, const ::LunaSDK::Image* request, ::LunaSDK::ImageProccessingResult* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_Proccesing : public BaseClass {
@@ -111,11 +111,11 @@ class LunaSDKServer final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Proccesing(::grpc::ServerContext* context, const ::LunaSDKService::Image* request, ::LunaSDKService::ImageProccessingResult* response) override {
+    ::grpc::Status Proccesing(::grpc::ServerContext* context, const ::LunaSDK::Image* request, ::LunaSDK::ImageProccessingResult* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestProccesing(::grpc::ServerContext* context, ::LunaSDKService::Image* request, ::grpc::ServerAsyncResponseWriter< ::LunaSDKService::ImageProccessingResult>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestProccesing(::grpc::ServerContext* context, ::LunaSDK::Image* request, ::grpc::ServerAsyncResponseWriter< ::LunaSDK::ImageProccessingResult>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -132,7 +132,7 @@ class LunaSDKServer final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Proccesing(::grpc::ServerContext* context, const ::LunaSDKService::Image* request, ::LunaSDKService::ImageProccessingResult* response) override {
+    ::grpc::Status Proccesing(::grpc::ServerContext* context, const ::LunaSDK::Image* request, ::LunaSDK::ImageProccessingResult* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -149,7 +149,7 @@ class LunaSDKServer final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Proccesing(::grpc::ServerContext* context, const ::LunaSDKService::Image* request, ::LunaSDKService::ImageProccessingResult* response) override {
+    ::grpc::Status Proccesing(::grpc::ServerContext* context, const ::LunaSDK::Image* request, ::LunaSDK::ImageProccessingResult* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -164,25 +164,25 @@ class LunaSDKServer final {
    public:
     WithStreamedUnaryMethod_Proccesing() {
       ::grpc::Service::MarkMethodStreamed(0,
-        new ::grpc::internal::StreamedUnaryHandler< ::LunaSDKService::Image, ::LunaSDKService::ImageProccessingResult>(std::bind(&WithStreamedUnaryMethod_Proccesing<BaseClass>::StreamedProccesing, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::LunaSDK::Image, ::LunaSDK::ImageProccessingResult>(std::bind(&WithStreamedUnaryMethod_Proccesing<BaseClass>::StreamedProccesing, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_Proccesing() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Proccesing(::grpc::ServerContext* context, const ::LunaSDKService::Image* request, ::LunaSDKService::ImageProccessingResult* response) override {
+    ::grpc::Status Proccesing(::grpc::ServerContext* context, const ::LunaSDK::Image* request, ::LunaSDK::ImageProccessingResult* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedProccesing(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::LunaSDKService::Image,::LunaSDKService::ImageProccessingResult>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedProccesing(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::LunaSDK::Image,::LunaSDK::ImageProccessingResult>* server_unary_streamer) = 0;
   };
   typedef WithStreamedUnaryMethod_Proccesing<Service > StreamedUnaryService;
   typedef Service SplitStreamedService;
   typedef WithStreamedUnaryMethod_Proccesing<Service > StreamedService;
 };
 
-}  // namespace LunaSDKService
+}  // namespace LunaSDK
 
 
 #endif  // GRPC_test_5fapi_2eproto__INCLUDED

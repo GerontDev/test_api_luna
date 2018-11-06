@@ -15,10 +15,10 @@
 #include <grpcpp/impl/codegen/rpc_service_method.h>
 #include <grpcpp/impl/codegen/service_type.h>
 #include <grpcpp/impl/codegen/sync_stream.h>
-namespace LunaSDKService {
+namespace LunaSDK {
 
 static const char* LunaSDKServer_method_names[] = {
-  "/LunaSDKService.LunaSDKServer/Proccesing",
+  "/LunaSDK.LunaSDKServer/Proccesing",
 };
 
 std::unique_ptr< LunaSDKServer::Stub> LunaSDKServer::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -31,34 +31,34 @@ LunaSDKServer::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chan
   : channel_(channel), rpcmethod_Proccesing_(LunaSDKServer_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status LunaSDKServer::Stub::Proccesing(::grpc::ClientContext* context, const ::LunaSDKService::Image& request, ::LunaSDKService::ImageProccessingResult* response) {
+::grpc::Status LunaSDKServer::Stub::Proccesing(::grpc::ClientContext* context, const ::LunaSDK::Image& request, ::LunaSDK::ImageProccessingResult* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_Proccesing_, context, request, response);
 }
 
-void LunaSDKServer::Stub::experimental_async::Proccesing(::grpc::ClientContext* context, const ::LunaSDKService::Image* request, ::LunaSDKService::ImageProccessingResult* response, std::function<void(::grpc::Status)> f) {
+void LunaSDKServer::Stub::experimental_async::Proccesing(::grpc::ClientContext* context, const ::LunaSDK::Image* request, ::LunaSDK::ImageProccessingResult* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_Proccesing_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::LunaSDKService::ImageProccessingResult>* LunaSDKServer::Stub::AsyncProccesingRaw(::grpc::ClientContext* context, const ::LunaSDKService::Image& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::LunaSDKService::ImageProccessingResult>::Create(channel_.get(), cq, rpcmethod_Proccesing_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::LunaSDK::ImageProccessingResult>* LunaSDKServer::Stub::AsyncProccesingRaw(::grpc::ClientContext* context, const ::LunaSDK::Image& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::LunaSDK::ImageProccessingResult>::Create(channel_.get(), cq, rpcmethod_Proccesing_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::LunaSDKService::ImageProccessingResult>* LunaSDKServer::Stub::PrepareAsyncProccesingRaw(::grpc::ClientContext* context, const ::LunaSDKService::Image& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::LunaSDKService::ImageProccessingResult>::Create(channel_.get(), cq, rpcmethod_Proccesing_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::LunaSDK::ImageProccessingResult>* LunaSDKServer::Stub::PrepareAsyncProccesingRaw(::grpc::ClientContext* context, const ::LunaSDK::Image& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::LunaSDK::ImageProccessingResult>::Create(channel_.get(), cq, rpcmethod_Proccesing_, context, request, false);
 }
 
 LunaSDKServer::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       LunaSDKServer_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< LunaSDKServer::Service, ::LunaSDKService::Image, ::LunaSDKService::ImageProccessingResult>(
+      new ::grpc::internal::RpcMethodHandler< LunaSDKServer::Service, ::LunaSDK::Image, ::LunaSDK::ImageProccessingResult>(
           std::mem_fn(&LunaSDKServer::Service::Proccesing), this)));
 }
 
 LunaSDKServer::Service::~Service() {
 }
 
-::grpc::Status LunaSDKServer::Service::Proccesing(::grpc::ServerContext* context, const ::LunaSDKService::Image* request, ::LunaSDKService::ImageProccessingResult* response) {
+::grpc::Status LunaSDKServer::Service::Proccesing(::grpc::ServerContext* context, const ::LunaSDK::Image* request, ::LunaSDK::ImageProccessingResult* response) {
   (void) context;
   (void) request;
   (void) response;
@@ -66,5 +66,5 @@ LunaSDKServer::Service::~Service() {
 }
 
 
-}  // namespace LunaSDKService
+}  // namespace LunaSDK
 

@@ -27,14 +27,32 @@ LDFLAGS += -L/usr/local/lib `pkg-config --libs protobuf grpc++ grpc`\
            -ldl
 endif
 
-all:  greeter_server
+PROTOC =../../grpc-1.16.0/grpc/bins/opt/protoc
+GRPC_CPP_PLUGIN = grp_cpp_plugin
+GRPC_CPP_PLUGIN_PATH ?= 'which $(GRPC_CPP_PLUSIN)'
+
+PROTOS_PATH = $(CURDIR)
+
+
+all:   greeter_server	
 
 greeter_server: test_api.pb.o test_api.grpc.pb.o greeter_server.o
 	$(CXX) $^ $(LDFLAGS) -o $@
 
+.PRECIOUS: %.grpc.pb.cc
+%.grpc.pb.cc: %.proto
+	$(PROTOC) -I $(PROTOS_PATH) --grpc_out=. --plugin=protoc-gen-grpc=$(GRPC_CPP_PLUGIN_PATH) $<
+
+.PRECIOUS: %.grpc.pb.cc
+%.grpc.pb.cc:%.proto
+	$(PROTOC) -I $(PROTOS_PATH) --CPP_out=. $<
+	
 clean:
 	rm -f *.o *.pb.cc *.pb.h greeter_server
+	
+setpkg:
+    shell export PKG_CONFIG_PATH=/usr/lib/pkgconfig:/usr/lib/pkgconfig
+
+.PHONY: all clean setpkg
 
 
-# The following is to test your system and ensure a smoother experience.
-# They are by no means necessary to actually compile a grpc-enabled software.
