@@ -226,6 +226,7 @@ class GreeterServiceImpl final : public LunaSDKServer::Service {
 			Quality->set_gray(qualityEstimation.gray);
 			Quality->set_blur(qualityEstimation.blur);
 			Quality->set_quality(qualityEstimation.getQuality());
+			face_->set_allocated_quality(Quality);
 
 			std::cout << "Quality estimate:" <<
 				"\nlight: " << qualityEstimation.light <<
@@ -249,6 +250,7 @@ class GreeterServiceImpl final : public LunaSDKServer::Service {
 			HeadPose->set_pitch(headPoseEstimation.pitch);
 			HeadPose->set_rool(headPoseEstimation.yaw);
 			HeadPose->set_yam(headPoseEstimation.roll);
+			face_->set_allocated_headpos(HeadPose);
 
 			std::cout << "Head pose estimate:" <<
 				"\npitch angle estimation: " << headPoseEstimation.pitch <<
