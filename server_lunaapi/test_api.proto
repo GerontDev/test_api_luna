@@ -24,8 +24,8 @@ service LunaSDKServer
 message  Image {
   int32 width = 1;
   int32 height =2;
-  int32 image_date_size =3;
-  bytes image_date =4;
+  int32 image_data_size =3;
+  bytes image_data =4;
 }
 
 message ImageProccesing {
@@ -44,7 +44,7 @@ message QualityFaceFountAttribute {
 
 message HeadPoseFaceFountAttribute {
     float pitch = 1;
-    float yam = 2;
+    float yaw = 2;
     float roll = 3;
 }
 message Rectangle {

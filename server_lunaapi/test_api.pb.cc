@@ -188,8 +188,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::Image, width_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::Image, height_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::Image, image_date_size_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::Image, image_date_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::Image, image_data_size_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::Image, image_data_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::ImageProccesing, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -214,7 +214,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::HeadPoseFaceFountAttribute, pitch_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::HeadPoseFaceFountAttribute, yam_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::HeadPoseFaceFountAttribute, yaw_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::HeadPoseFaceFountAttribute, roll_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::LunaSDK::Rectangle, _internal_metadata_),
@@ -284,14 +284,14 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\016test_api.proto\022\007LunaSDK\"S\n\005Image\022\r\n\005wi"
-      "dth\030\001 \001(\005\022\016\n\006height\030\002 \001(\005\022\027\n\017image_date_"
-      "size\030\003 \001(\005\022\022\n\nimage_date\030\004 \001(\014\"D\n\017ImageP"
+      "dth\030\001 \001(\005\022\016\n\006height\030\002 \001(\005\022\027\n\017image_data_"
+      "size\030\003 \001(\005\022\022\n\nimage_data\030\004 \001(\014\"D\n\017ImageP"
       "roccesing\022\022\n\nID_Request\030\001 \001(\005\022\035\n\005Photo\030\002"
       " \001(\0132\016.LunaSDK.Image\"x\n\031QualityFaceFount"
       "Attribute\022\014\n\004dark\030\001 \001(\001\022\r\n\005ligth\030\002 \001(\001\022\014"
       "\n\004gray\030\003 \001(\001\022\014\n\004blur\030\004 \001(\001\022\017\n\007quality\030\005 "
       "\001(\001\022\021\n\tthreshold\030\006 \001(\001\"F\n\032HeadPoseFaceFo"
-      "untAttribute\022\r\n\005pitch\030\001 \001(\002\022\013\n\003yam\030\002 \001(\002"
+      "untAttribute\022\r\n\005pitch\030\001 \001(\002\022\013\n\003yaw\030\002 \001(\002"
       "\022\014\n\004roll\030\003 \001(\002\"@\n\tRectangle\022\t\n\001x\030\001 \001(\005\022\t"
       "\n\001y\030\002 \001(\005\022\r\n\005width\030\003 \001(\005\022\016\n\006height\030\004 \001(\005"
       "\"\323\001\n\022FaceFountAttribute\022 \n\004rect\030\001 \001(\0132\022."
@@ -332,8 +332,8 @@ void Image::InitAsDefaultInstance() {
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Image::kWidthFieldNumber;
 const int Image::kHeightFieldNumber;
-const int Image::kImageDateSizeFieldNumber;
-const int Image::kImageDateFieldNumber;
+const int Image::kImageDataSizeFieldNumber;
+const int Image::kImageDataFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Image::Image()
@@ -347,21 +347,21 @@ Image::Image(const Image& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  image_date_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.image_date().size() > 0) {
-    image_date_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.image_date_);
+  image_data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.image_data().size() > 0) {
+    image_data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.image_data_);
   }
   ::memcpy(&width_, &from.width_,
-    static_cast<size_t>(reinterpret_cast<char*>(&image_date_size_) -
-    reinterpret_cast<char*>(&width_)) + sizeof(image_date_size_));
+    static_cast<size_t>(reinterpret_cast<char*>(&image_data_size_) -
+    reinterpret_cast<char*>(&width_)) + sizeof(image_data_size_));
   // @@protoc_insertion_point(copy_constructor:LunaSDK.Image)
 }
 
 void Image::SharedCtor() {
-  image_date_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  image_data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&width_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&image_date_size_) -
-      reinterpret_cast<char*>(&width_)) + sizeof(image_date_size_));
+      reinterpret_cast<char*>(&image_data_size_) -
+      reinterpret_cast<char*>(&width_)) + sizeof(image_data_size_));
 }
 
 Image::~Image() {
@@ -370,7 +370,7 @@ Image::~Image() {
 }
 
 void Image::SharedDtor() {
-  image_date_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  image_data_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void Image::SetCachedSize(int size) const {
@@ -393,10 +393,10 @@ void Image::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  image_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  image_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&width_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&image_date_size_) -
-      reinterpret_cast<char*>(&width_)) + sizeof(image_date_size_));
+      reinterpret_cast<char*>(&image_data_size_) -
+      reinterpret_cast<char*>(&width_)) + sizeof(image_data_size_));
   _internal_metadata_.Clear();
 }
 
@@ -438,26 +438,26 @@ bool Image::MergePartialFromCodedStream(
         break;
       }
 
-      // int32 image_date_size = 3;
+      // int32 image_data_size = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &image_date_size_)));
+                 input, &image_data_size_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // bytes image_date = 4;
+      // bytes image_data = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_image_date()));
+                input, this->mutable_image_data()));
         } else {
           goto handle_unusual;
         }
@@ -500,15 +500,15 @@ void Image::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->height(), output);
   }
 
-  // int32 image_date_size = 3;
-  if (this->image_date_size() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->image_date_size(), output);
+  // int32 image_data_size = 3;
+  if (this->image_data_size() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->image_data_size(), output);
   }
 
-  // bytes image_date = 4;
-  if (this->image_date().size() > 0) {
+  // bytes image_data = 4;
+  if (this->image_data().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
-      4, this->image_date(), output);
+      4, this->image_data(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -535,16 +535,16 @@ void Image::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->height(), target);
   }
 
-  // int32 image_date_size = 3;
-  if (this->image_date_size() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->image_date_size(), target);
+  // int32 image_data_size = 3;
+  if (this->image_data_size() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->image_data_size(), target);
   }
 
-  // bytes image_date = 4;
-  if (this->image_date().size() > 0) {
+  // bytes image_data = 4;
+  if (this->image_data().size() > 0) {
     target =
       ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
-        4, this->image_date(), target);
+        4, this->image_data(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -564,11 +564,11 @@ size_t Image::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // bytes image_date = 4;
-  if (this->image_date().size() > 0) {
+  // bytes image_data = 4;
+  if (this->image_data().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::BytesSize(
-        this->image_date());
+        this->image_data());
   }
 
   // int32 width = 1;
@@ -585,11 +585,11 @@ size_t Image::ByteSizeLong() const {
         this->height());
   }
 
-  // int32 image_date_size = 3;
-  if (this->image_date_size() != 0) {
+  // int32 image_data_size = 3;
+  if (this->image_data_size() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->image_date_size());
+        this->image_data_size());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -619,9 +619,9 @@ void Image::MergeFrom(const Image& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.image_date().size() > 0) {
+  if (from.image_data().size() > 0) {
 
-    image_date_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.image_date_);
+    image_data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.image_data_);
   }
   if (from.width() != 0) {
     set_width(from.width());
@@ -629,8 +629,8 @@ void Image::MergeFrom(const Image& from) {
   if (from.height() != 0) {
     set_height(from.height());
   }
-  if (from.image_date_size() != 0) {
-    set_image_date_size(from.image_date_size());
+  if (from.image_data_size() != 0) {
+    set_image_data_size(from.image_data_size());
   }
 }
 
@@ -658,11 +658,11 @@ void Image::Swap(Image* other) {
 }
 void Image::InternalSwap(Image* other) {
   using std::swap;
-  image_date_.Swap(&other->image_date_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  image_data_.Swap(&other->image_data_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   swap(width_, other->width_);
   swap(height_, other->height_);
-  swap(image_date_size_, other->image_date_size_);
+  swap(image_data_size_, other->image_data_size_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
@@ -1349,7 +1349,7 @@ void HeadPoseFaceFountAttribute::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int HeadPoseFaceFountAttribute::kPitchFieldNumber;
-const int HeadPoseFaceFountAttribute::kYamFieldNumber;
+const int HeadPoseFaceFountAttribute::kYawFieldNumber;
 const int HeadPoseFaceFountAttribute::kRollFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -1434,14 +1434,14 @@ bool HeadPoseFaceFountAttribute::MergePartialFromCodedStream(
         break;
       }
 
-      // float yam = 2;
+      // float yaw = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(21u /* 21 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &yam_)));
+                 input, &yaw_)));
         } else {
           goto handle_unusual;
         }
@@ -1493,9 +1493,9 @@ void HeadPoseFaceFountAttribute::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteFloat(1, this->pitch(), output);
   }
 
-  // float yam = 2;
-  if (this->yam() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(2, this->yam(), output);
+  // float yaw = 2;
+  if (this->yaw() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(2, this->yaw(), output);
   }
 
   // float roll = 3;
@@ -1522,9 +1522,9 @@ void HeadPoseFaceFountAttribute::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(1, this->pitch(), target);
   }
 
-  // float yam = 2;
-  if (this->yam() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(2, this->yam(), target);
+  // float yaw = 2;
+  if (this->yaw() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(2, this->yaw(), target);
   }
 
   // float roll = 3;
@@ -1554,8 +1554,8 @@ size_t HeadPoseFaceFountAttribute::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
-  // float yam = 2;
-  if (this->yam() != 0) {
+  // float yaw = 2;
+  if (this->yaw() != 0) {
     total_size += 1 + 4;
   }
 
@@ -1594,8 +1594,8 @@ void HeadPoseFaceFountAttribute::MergeFrom(const HeadPoseFaceFountAttribute& fro
   if (from.pitch() != 0) {
     set_pitch(from.pitch());
   }
-  if (from.yam() != 0) {
-    set_yam(from.yam());
+  if (from.yaw() != 0) {
+    set_yaw(from.yaw());
   }
   if (from.roll() != 0) {
     set_roll(from.roll());
@@ -1627,7 +1627,7 @@ void HeadPoseFaceFountAttribute::Swap(HeadPoseFaceFountAttribute* other) {
 void HeadPoseFaceFountAttribute::InternalSwap(HeadPoseFaceFountAttribute* other) {
   using std::swap;
   swap(pitch_, other->pitch_);
-  swap(yam_, other->yam_);
+  swap(yaw_, other->yaw_);
   swap(roll_, other->roll_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }

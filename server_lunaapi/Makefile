@@ -15,23 +15,18 @@
 #
 
 CXX = g++
-CPPFLAGS += `pkg-config --cflags protobuf grpc`
+CPPFLAGS += `pkg-config --cflags protobuf grpc lunasdk`
 CXXFLAGS += -std=c++11
-ifeq ($(SYSTEM),Darwin)
-LDFLAGS += -L/usr/local/lib `pkg-config --libs protobuf grpc++ grpc`\
+
+LDFLAGS += -L/usr/local/lib -L/usr/lib `pkg-config --libs protobuf grpc++ grpc lunasdk`\
            -lgrpc++_reflection\
-           -ldl
-else
-LDFLAGS += -L/usr/local/lib `pkg-config --libs protobuf grpc++ grpc`\
+           -ldl\
+           -rdynamic /usr/lib/libFaceEngineSDK.so\
+           -Wl,-rpath,/home/luna-sdk_linux_rel_v.3.6.6/examples/lib/gcc4/x64:
+
+LDFLAGS_ += -L/usr/local/lib -L/usr/lib `pkg-config --libs protobuf grpc++ grpc lunasdk`\
            -Wl,--no-as-needed -lgrpc++_reflection -Wl,--as-needed\
            -ldl
-endif
-
-PROTOC =../../grpc-1.16.0/grpc/bins/opt/protoc
-GRPC_CPP_PLUGIN = grp_cpp_plugin
-GRPC_CPP_PLUGIN_PATH ?= 'which $(GRPC_CPP_PLUSIN)'
-
-PROTOS_PATH = $(CURDIR)
 
 
 all:   greeter_server	
@@ -39,20 +34,13 @@ all:   greeter_server
 greeter_server: test_api.pb.o test_api.grpc.pb.o greeter_server.o
 	$(CXX) $^ $(LDFLAGS) -o $@
 
-.PRECIOUS: %.grpc.pb.cc
-%.grpc.pb.cc: %.proto
-	$(PROTOC) -I $(PROTOS_PATH) --grpc_out=. --plugin=protoc-gen-grpc=$(GRPC_CPP_PLUGIN_PATH) $<
+server:  test_api.pb.o test_api.grpc.pb.o greeter_server.o
+	$(CXX) $^ $(LDFLAGS_) -o $@
 
-.PRECIOUS: %.grpc.pb.cc
-%.grpc.pb.cc:%.proto
-	$(PROTOC) -I $(PROTOS_PATH) --CPP_out=. $<
-	
 clean:
-	rm -f *.o *.pb.cc *.pb.h greeter_server
+	rm -f *.o greeter_server
 	
-setpkg:
-    shell export PKG_CONFIG_PATH=/usr/lib/pkgconfig:/usr/lib/pkgconfig
 
-.PHONY: all clean setpkg
+.PHONY: all clean server
 
 
